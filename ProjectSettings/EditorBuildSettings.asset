@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Reality.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Consciousness.unity
     guid: 67b5f12c53d084e449e000d54654bb14
+  - enabled: 1
+    path: Assets/Scenes/Reality.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

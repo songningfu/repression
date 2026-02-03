@@ -12,6 +12,6 @@ namespace SeeAPsychologist.MentalStats
         Minigame = 4,
         PlotEvent = 5,
         AutoTick = 6,
+        Interaction = 7,
     }
 }
-
