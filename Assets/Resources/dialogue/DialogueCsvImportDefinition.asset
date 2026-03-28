@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4f12947c071a44f8e456c14719593b, type: 3}
+  m_Name: DialogueCsvImportDefinition
+  m_EditorClassIdentifier: 
+  nodesCsv: {fileID: 4900000, guid: 238bc129302fe8148bfd0d6a7a4ecbe6, type: 3}
+  choicesCsv: {fileID: 4900000, guid: cabf8668f7c49ab46a20da2ed7014cba, type: 3}
+  outputGraph: {fileID: 11400000, guid: 086724bad39fdea4496eb90e955c957d, type: 2}
+  graphId: DialogueGraphTest
+  clearExistingOutputBeforeImport: 1

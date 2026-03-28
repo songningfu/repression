@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "repression.sln"
+    "dotnet.defaultSolution": "SeeAPsychologist.sln"
 }

@@ -1,0 +1,51 @@
+Fungus：哪些文档在讲「怎么用」？
+=====================================
+
+一、包内文本（Assets/Thirds/Fungus）里分别是什么
+-------------------------------------------------
+
+README.txt / README.zh-CN.txt
+  项目简介、官方学习页与论坛链接。不含分步教程正文，但会指向真正的教程入口。
+
+CHANGELOG.txt
+  版本更新记录（新增/修复/变更条目）。给维护与升级对照用，不是入门教材。
+
+LICENSE.txt
+  MIT 许可证法律文本。与「怎么操作 Fungus」无关。
+
+Thirdparty 下各库的 LICENSE、字体 OFL、ThirdPartyNotices 等
+  第三方授权与署名，不是 Fungus 使用说明。
+
+Thirdparty/FungusLua/Resources/Lua/fungus.txt
+  供 Lua 脚本 require 的**运行时代码**，注释为英文 API 说明。
+  中文对照见同目录 Docs 下的：FungusLua_fungus模块_API参考.zh-CN.txt
+
+Thirdparty/FungusLua/Resources/Types/FungusTypes.txt、UnityTypes.txt
+  注册到 Lua 的类型列表（JSON），不是教程正文。
+
+
+二、真正讲「怎么用」的内容主要在哪里
+------------------------------------
+
+1) 官方学习页（安装、视频教程、文档入口）
+   http://fungusgames.com/learn
+
+2) GitHub Wiki（Fungus 长期把详细文档放在 Wiki，CHANGELOG 里也提到过）
+   https://github.com/snozbot/fungus/wiki
+
+3) 官方论坛（提问与搜已有解答）
+   http://fungusgames.com/forum
+
+4) 示例场景（边运行边看 Flowchart 怎么连）
+   本工程中一般在：Assets/Thirds/FungusExamples/
+   例如 Conversation、Variables、FungusLua 等子文件夹里的 .unity 场景。
+
+5) Unity 编辑器内
+   选中 Flowchart、命令块等时，Inspector 里的说明文字；部分菜单 Tools -> Fungus 下的工具项。
+
+
+三、结论
+--------
+
+Fungus 没有把完整图文教程塞进 Plugins 目录；**系统性的「怎么用」在官网 learn + GitHub Wiki + 示例场景**。
+包内 README 负责指路；若用 Lua，可阅读本 Docs 下的 FungusLua API 中文参考。

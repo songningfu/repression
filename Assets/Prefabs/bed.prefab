@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 4713244573362646543}
   - component: {fileID: 1089620841041372250}
   - component: {fileID: 1148514508150623892}
+  - component: {fileID: 555010282918980375}
   m_Layer: 0
   m_Name: bed
   m_TagString: Untagged
@@ -478,6 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 0
   context: bed
+  ignoreDisociationCheck: 0
 --- !u!114 &1148514508150623892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,3 +496,26 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   hidePromptAfterInteract: 0
+--- !u!114 &555010282918980375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041853480152823846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f69cb2577464a6192a4e7ee9b7c8601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceId: 
+  promptTexts:
+  - "\u8FD9\u662F\u5E8A\u3002"
+  triggerChance: 1
+  showDuration: 1.6
+  cooldownSeconds: 0.75
+  priority: 0
+  allowRepeat: 1
+  triggerOncePerEnter: 1
+  playerTag: Player
+  logBlockedReason: 0

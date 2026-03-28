@@ -1,0 +1,6 @@
+NodeId,SpeakerName,PortraitKey,Text,NextId
+100,SpeakerA,Portrait_A,"LINE_100_Intro_You_are_not_alone",110
+110,SpeakerA,Portrait_A,"LINE_110_Choose_your_response", 
+120,SpeakerB,Portrait_B,"LINE_120_Calm_path_go_on",140
+130,SpeakerB,Portrait_B,"LINE_130_Panic_path_go_on",140
+140,SpeakerA,Portrait_A,"LINE_140_End_message", 

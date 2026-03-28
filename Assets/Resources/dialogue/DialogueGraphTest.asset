@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4241faa768602a544a98970316b423ad, type: 3}
+  m_Name: DialogueGraphTest
+  m_EditorClassIdentifier: 
+  graphId: DialogueGraphTest
+  nodes:
+  - nodeId: 100
+    speakerName: SpeakerA
+    portraitKey: Portrait_A
+    text: LINE_100_Intro_You_are_not_alone
+    nextId: 110
+  - nodeId: 110
+    speakerName: SpeakerA
+    portraitKey: Portrait_A
+    text: LINE_110_Choose_your_response
+    nextId: 
+  - nodeId: 120
+    speakerName: SpeakerB
+    portraitKey: Portrait_B
+    text: LINE_120_Calm_path_go_on
+    nextId: 140
+  - nodeId: 130
+    speakerName: SpeakerB
+    portraitKey: Portrait_B
+    text: LINE_130_Panic_path_go_on
+    nextId: 140
+  - nodeId: 140
+    speakerName: SpeakerA
+    portraitKey: Portrait_A
+    text: LINE_140_End_message
+    nextId: 
+  choiceGroups:
+  - nodeId: 110
+    choices:
+    - choiceId: 1
+      choiceOrder: 1
+      nodeId: 110
+      optionText: Option_Calm
+      nextId: 120
+      stressModifier: -10
+      thresholdLow: 0
+      thresholdHigh: 40
+      unavailableMode: 0
+    - choiceId: 2
+      choiceOrder: 2
+      nodeId: 110
+      optionText: Option_Truth
+      nextId: 130
+      stressModifier: 5
+      thresholdLow: 0
+      thresholdHigh: 100
+      unavailableMode: 0
+    - choiceId: 3
+      choiceOrder: 3
+      nodeId: 110
+      optionText: Option_Panic
+      nextId: 130
+      stressModifier: 12
+      thresholdLow: 60
+      thresholdHigh: 100
+      unavailableMode: 0

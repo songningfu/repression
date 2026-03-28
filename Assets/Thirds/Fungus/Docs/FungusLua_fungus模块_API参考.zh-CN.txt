@@ -1,0 +1,126 @@
+Fungus Lua 模块 fungus.txt API 参考（中文）
+============================================
+对应资源文件：Thirdparty/FungusLua/Resources/Lua/fungus.txt
+说明：以下为注释与行为的译文，便于查阅；运行时仍以英文原文件为准。
+
+------------
+调试
+------------
+inspect(v)
+  以人类可读格式打印对象 v 的摘要。
+
+------------
+数学
+------------
+round(val, decimal)
+  将数字四舍五入到指定小数位。
+  例：round(1.523, 100) → 1.52；若不传 decimal，则四舍五入到整数。
+
+------------
+协程
+------------
+wait(duration)
+  等待若干秒（通过协程 yield）。
+
+waitfor(fn, timeoutduration)
+  等待直到 lambda fn 返回 true，或超时。
+  成功返回 true，超时返回 false。
+
+run(enumerator)
+  启动一个返回 IEnumerator 的 C# 协程方法；若方法签名不对会报错。
+
+runwait(enumerator)
+  同上，并会等到该协程结束。
+
+---------------
+字符串表 / 本地化
+---------------
+setlanguage(languagecode)
+  设置字符串表当前语言代码。
+
+getstring(key)
+  从字符串表按 key 取字符串。
+
+sub(text)
+  对一段文本做变量替换与本地化替换。
+  例：变量 v=10，"Subbed value is [$v]" → "Subbed value is 10"
+
+--------------------------------------------------------------
+集成测试（需 Unity Test Tools）
+--------------------------------------------------------------
+check(c, reason)
+  断言条件为真（避免与 Lua 内置 assert 重名故命名为 check）。
+
+pass()
+  标记集成测试通过。
+
+fail(reason)
+  标记集成测试失败；reason 为说明字符串。
+
+---------------------------------------------
+以下函数依赖 Fungus 运行环境
+---------------------------------------------
+
+-------------
+Say 对话框
+-------------
+M.sayoptions
+  配置 Say 行为：clearprevious、waitforinput、fadewhendone、stopvoiceover 等。
+
+setsaydialog(saydialog)
+  设置当前用于 say / conversation 的 SayDialog。
+
+getsaydialog()
+  获取当前 SayDialog。
+
+setcharacter(character, portrait)
+  设置 SayDialog 当前说话角色与立绘。
+  character：Fungus.Character；portrait：角色立绘列表中的精灵名称。
+
+say(text, voiceclip)
+  向当前 SayDialog 输出文本；可先经变量替换。
+  voiceclip：可选配音 AudioClip。
+
+conversation(text)
+  多行对话，可逐行指定角色、立绘、舞台位置等。
+  格式示例：[角色] [立绘] [位置] <: 正文>
+  例：john happy left: Hi, I'm happy.
+  前三个参数顺序可任意；故事正文以 ':' 开始直到换行。
+
+--------------
+Menu 对话框
+--------------
+setmenudialog(menudialog)
+  设置当前用于 menu 的 MenuDialog。
+
+getmenudialog()
+  获取当前 MenuDialog。
+
+menu(text, callback, interactive)
+  显示一个菜单项；选中时调用 callback。
+  interactive 为 false 时显示为不可选（可选参数，默认 true）。
+
+choose(options)
+  显示选项列表并等待选择；以 '~' 开头的项会显示但不可选。
+  返回所选下标；Lua 表从 1 起计；列表为空返回 0。
+
+choosetimer(options, duration, defaultoption)
+  同 choose，但带倒计时；超时返回 defaultoption。
+
+menutimer(duration, callback)
+  显示倒计时；超时未选则调用 callback。
+
+clearmenu()
+  清除当前所有菜单选项。
+
+------------
+Flowchart
+------------
+getvar(flowchart, varname)
+  取 Flowchart 上指定名称的变量。访问数值用 .value，例如：
+  v = getvar(flowchart, "FloatVar"); v.value = 10
+
+runblock(flowchart, blockname, commandindex, nowait)
+  执行指定 Block。
+  commandindex：从第几条命令开始（可选）。
+  nowait 为 true 时不等待 Block 跑完；false 则 yield 直到结束。

@@ -1,0 +1,4 @@
+ChoiceId,ChoiceOrder,NodeId,OptionText,NextId,StressModifier,ThresholdLow,ThresholdHigh
+1,1,110,"Option_Calm",120,-10,0,40
+2,2,110,"Option_Truth",130,5,0,100
+3,3,110,"Option_Panic",130,12,60,100
