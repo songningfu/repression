@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cada5d018fb4ff447aadfc7c609a8dcd, type: 2}
-  m_sharedMaterial: {fileID: -1897117513132472999, guid: cada5d018fb4ff447aadfc7c609a8dcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6c32678bf0434a339b9c6a1df1a6953, type: 2}
+  m_sharedMaterial: {fileID: -3940207372686216576, guid: d6c32678bf0434a339b9c6a1df1a6953, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,8 +203,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cada5d018fb4ff447aadfc7c609a8dcd, type: 2}
-  m_sharedMaterial: {fileID: -1897117513132472999, guid: cada5d018fb4ff447aadfc7c609a8dcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6c32678bf0434a339b9c6a1df1a6953, type: 2}
+  m_sharedMaterial: {fileID: -3940207372686216576, guid: d6c32678bf0434a339b9c6a1df1a6953, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -486,6 +486,14 @@ MonoBehaviour:
   choiceButtonPrefab: {fileID: 5037137297719440896, guid: f2ad2e596b021c647837399b7391bc4c, type: 3}
   nextButton: {fileID: 7232943674800943667}
   nextButtonLabel: {fileID: 5611490708882174115}
+  showNextButton: 0
+  clickAnywhereToAdvance: 1
+  dialogueFont: {fileID: 11400000, guid: d6c32678bf0434a339b9c6a1df1a6953, type: 2}
+  applyPortraitLayout: 1
+  portraitMaskSize: {x: 150, y: 170}
+  portraitSpriteSize: {x: 150, y: 300}
+  portraitSpriteYOffset: -55
+  portraitMaskAnchoredPosition: {x: 100, y: 24}
   charactersPerSecond: 24
   fastCharactersPerSecond: 72
   useUnscaledTime: 1
@@ -511,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8947869680588306342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -648,8 +656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -344, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -420, y: 40}
+  m_SizeDelta: {x: 300, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3694201014856254202
 CanvasRenderer:
@@ -681,7 +689,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -756,8 +764,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cada5d018fb4ff447aadfc7c609a8dcd, type: 2}
-  m_sharedMaterial: {fileID: -1897117513132472999, guid: cada5d018fb4ff447aadfc7c609a8dcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6c32678bf0434a339b9c6a1df1a6953, type: 2}
+  m_sharedMaterial: {fileID: -3940207372686216576, guid: d6c32678bf0434a339b9c6a1df1a6953, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

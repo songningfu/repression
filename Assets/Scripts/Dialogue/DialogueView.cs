@@ -29,6 +29,19 @@ namespace SeeAPsychologist.Dialogue
         [Header("Controls")]
         [SerializeField] private Button nextButton;
         [SerializeField] private TMP_Text nextButtonLabel;
+        [SerializeField] private bool showNextButton;
+        [Tooltip("开启后点击屏幕任意位置可推进对话（打字中则瞬间显示全文）。")]
+        [SerializeField] private bool clickAnywhereToAdvance = true;
+
+        [Header("Typography")]
+        [SerializeField] private TMP_FontAsset dialogueFont;
+
+        [Header("Portrait Layout")]
+        [SerializeField] private bool applyPortraitLayout = true;
+        [SerializeField] private Vector2 portraitMaskSize = new(150f, 170f);
+        [SerializeField] private Vector2 portraitSpriteSize = new(150f, 300f);
+        [SerializeField] private float portraitSpriteYOffset = -55f;
+        [SerializeField] private Vector2 portraitMaskAnchoredPosition = new(100f, 24f);
 
         [Header("Typewriter")]
         [SerializeField] private float charactersPerSecond = 24f;
@@ -64,7 +77,11 @@ namespace SeeAPsychologist.Dialogue
             if (nextButton != null)
             {
                 nextButton.onClick.AddListener(HandleNextClicked);
+                nextButton.gameObject.SetActive(showNextButton);
             }
+
+            ApplyDialogueFont();
+            SetupPortraitMask();
 
             if (runner != null)
             {
@@ -93,6 +110,21 @@ namespace SeeAPsychologist.Dialogue
                 nextButton.onClick.RemoveListener(HandleNextClicked);
             }
 
+        }
+
+        private void Update()
+        {
+            if (!clickAnywhereToAdvance || runner == null || !runner.IsActive)
+            {
+                return;
+            }
+
+            if (!WasAdvanceInputPressed())
+            {
+                return;
+            }
+
+            HandleNextClicked();
         }
 
         /// <summary>
@@ -144,6 +176,7 @@ namespace SeeAPsychologist.Dialogue
         private void HandleDialogueVisibilityChanged(bool visible)
         {
             SetPanelVisible(visible);
+
             if (!visible)
             {
                 StopTypewriter();
@@ -188,7 +221,7 @@ namespace SeeAPsychologist.Dialogue
 
             if (nextButton != null)
             {
-                nextButton.gameObject.SetActive(controlState.ShowNextButton);
+                nextButton.gameObject.SetActive(showNextButton && controlState.ShowNextButton);
                 nextButton.interactable = controlState.CanAdvance;
             }
 
@@ -213,6 +246,16 @@ namespace SeeAPsychologist.Dialogue
             if (_controlState.IsTyping)
             {
                 CompleteTypewriterImmediately();
+                return;
+            }
+
+            if (_spawnedChoices.Count > 0)
+            {
+                return;
+            }
+
+            if (!_controlState.CanAdvance)
+            {
                 return;
             }
 
@@ -313,6 +356,7 @@ namespace SeeAPsychologist.Dialogue
             {
                 portraitImage.sprite = portrait;
                 portraitImage.enabled = portrait != null;
+                portraitImage.preserveAspect = true;
                 return;
             }
 
@@ -369,6 +413,70 @@ namespace SeeAPsychologist.Dialogue
             }
 
             uiAudioSource.PlayOneShot(clip);
+        }
+
+        private void ApplyDialogueFont()
+        {
+            if (dialogueFont == null)
+            {
+                return;
+            }
+
+            ApplyFontTo(speakerNameText);
+            ApplyFontTo(dialogueText);
+            ApplyFontTo(nextButtonLabel);
+        }
+
+        private void ApplyFontTo(TMP_Text text)
+        {
+            if (text == null || dialogueFont == null)
+            {
+                return;
+            }
+
+            text.font = dialogueFont;
+        }
+
+        private void SetupPortraitMask()
+        {
+            if (!applyPortraitLayout || portraitImage == null)
+            {
+                return;
+            }
+
+            var spriteRect = portraitImage.rectTransform;
+            if (spriteRect.parent != null && spriteRect.parent.name == "PortraitMask")
+            {
+                return;
+            }
+
+            var maskGo = new GameObject("PortraitMask", typeof(RectTransform), typeof(RectMask2D));
+            var maskRect = maskGo.GetComponent<RectTransform>();
+            maskRect.SetParent(spriteRect.parent, false);
+            maskRect.SetSiblingIndex(spriteRect.GetSiblingIndex());
+
+            maskRect.anchorMin = new Vector2(0f, 0f);
+            maskRect.anchorMax = new Vector2(0f, 0f);
+            maskRect.pivot = new Vector2(0.5f, 0f);
+            maskRect.anchoredPosition = portraitMaskAnchoredPosition;
+            maskRect.sizeDelta = portraitMaskSize;
+
+            spriteRect.SetParent(maskRect, false);
+            spriteRect.anchorMin = new Vector2(0.5f, 0f);
+            spriteRect.anchorMax = new Vector2(0.5f, 0f);
+            spriteRect.pivot = new Vector2(0.5f, 0f);
+            spriteRect.anchoredPosition = new Vector2(0f, portraitSpriteYOffset);
+            spriteRect.sizeDelta = portraitSpriteSize;
+        }
+
+        private static bool WasAdvanceInputPressed()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                return true;
+            }
+
+            return Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began;
         }
 
     }

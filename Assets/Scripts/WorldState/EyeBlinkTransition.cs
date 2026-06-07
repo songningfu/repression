@@ -28,6 +28,12 @@ namespace SeeAPsychologist.WorldState
 
         private bool isTransitioning = false;
 
+        /// <summary>当前是否正在播放闭眼/睁眼转场。</summary>
+        public bool IsTransitioning => isTransitioning;
+
+        /// <summary>一次完整转场（含黑屏回调与睁眼）结束后触发。</summary>
+        public event System.Action OnTransitionCompleted;
+
         private void Awake()
         {
             if (_instance != null && _instance != this)
@@ -104,6 +110,8 @@ namespace SeeAPsychologist.WorldState
             yield return StartCoroutine(OpenEyes());
 
             isTransitioning = false;
+            try { OnTransitionCompleted?.Invoke(); }
+            catch (System.Exception ex) { Debug.LogError($"[EyeBlinkTransition] OnTransitionCompleted subscriber threw: {ex}"); }
         }
 
         private IEnumerator CloseEyes()

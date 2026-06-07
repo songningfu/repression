@@ -1,0 +1,7 @@
+NodeId,SpeakerName,PortraitKey,Text,NextId
+15000,林顾念,Portrait_LinGuNian,"……",15010
+15010,林顾念,Portrait_LinGuNian,"我在哪？",15020
+15020,林顾念,Portrait_LinGuNian,"这是……我的房间？冰箱、门、沙发都在。可为什么全是灰的。",15030
+15030,林顾念,Portrait_LinGuNian,"我怎么了……刚才不是还好好的吗。",15040
+15040,林顾念,Portrait_LinGuNian,"头好沉，像被什么东西压着，醒不过来。",15050
+15050,林顾念,Portrait_LinGuNian,"……先别慌。深呼吸。先把状况弄清楚。",

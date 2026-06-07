@@ -20,6 +20,7 @@ namespace SeeAPsychologist.WorldState
         [SerializeField] private WorldStateConfig config;
 
         public WorldType CurrentWorld { get; private set; }
+        public WorldStateConfig Config => config;
 
         /// <summary>
         /// 世界切换完成事件（在目标场景 loaded 后触发，保证 CurrentWorld 已更新）。
@@ -196,10 +197,8 @@ namespace SeeAPsychologist.WorldState
 
         private static WorldType GuessWorldFromScene(string sceneName, WorldStateConfig cfg)
         {
-            if (!string.IsNullOrWhiteSpace(cfg.realitySceneName) && sceneName == cfg.realitySceneName)
-                return WorldType.Reality;
-            if (!string.IsNullOrWhiteSpace(cfg.consciousnessSceneName) && sceneName == cfg.consciousnessSceneName)
-                return WorldType.Consciousness;
+            if (cfg.IsRealityScene(sceneName)) return WorldType.Reality;
+            if (cfg.IsConsciousnessScene(sceneName)) return WorldType.Consciousness;
             return cfg.fallbackInitialWorld;
         }
 

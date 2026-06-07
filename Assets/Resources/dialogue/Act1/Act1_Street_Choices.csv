@@ -1,0 +1,4 @@
+ChoiceId,ChoiceOrder,NodeId,OptionText,NextId,StressModifier,ThresholdLow,ThresholdHigh
+1,1,13310,"[快步走过]",13320,2,0,100
+2,1,13420,"[还行。]",13430,0,0,100
+3,2,13420,"[没睡好……]",13440,-1,0,100

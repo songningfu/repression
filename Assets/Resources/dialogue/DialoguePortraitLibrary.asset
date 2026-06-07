@@ -17,3 +17,9 @@ MonoBehaviour:
     portrait: {fileID: 21300000, guid: d8bb215c36336d84faa2975dfcc3cf66, type: 3}
   - key: Portrait_B
     portrait: {fileID: 21300000, guid: d29737975ad745a46b30002a1c0a2ee7, type: 3}
+  - key: Portrait_LinGuNian
+    portrait: {fileID: 21300000, guid: 2adbfada58e8b473b9f720593eccd167, type: 3}
+  - key: Portrait_LuYun
+    portrait: {fileID: 21300000, guid: 74e98abd0cd0f482380eb62d961bc1d2, type: 3}
+  - key: Portrait_HuoZheng
+    portrait: {fileID: 21300000, guid: 1168db71675014975b8bd6475d2bbfa7, type: 3}

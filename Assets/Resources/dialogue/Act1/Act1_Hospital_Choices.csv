@@ -1,0 +1,3 @@
+ChoiceId,ChoiceOrder,NodeId,OptionText,NextId,StressModifier,ThresholdLow,ThresholdHigh
+1,1,14180,"[您跟他说我挺好的就行。]",14190,0,0,100
+2,2,14180,"[（沉默，继续削苹果。）]",14200,2,0,100

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4241faa768602a544a98970316b423ad, type: 3}
+  m_Name: Act1_Street
+  m_EditorClassIdentifier: 
+  graphId: Act1_Street
+  nodes:
+  - nodeId: 13000
+    speakerName: "\u6797\u987E\u5FF5"
+    portraitKey: Portrait_LinGuNian
+    text: "\u51FA\u95E8\u3002\u53EA\u662F\u51FA\u95E8\u800C\u5DF2\u3002\u8D70\u5230\u4FBF\u5229\u5E97\uFF0C\u642C\u8D27\uFF0C\u62FF\u94B1\uFF0C\u56DE\u6765\u3002\u5C31\u8FD9\u4E9B\u3002"
+    nextId: 13010
+  - nodeId: 13010
+    speakerName: "\u65C1\u767D"
+    portraitKey: 
+    text: "\u8D70\u5ECA\u660F\u6697\uFF0C\u65E5\u5149\u706F\u7BA1\u6709\u4E00\u6839\u4E0D\u4EAE\u4E86\u3002\u4ED6\u4F4E\u7740\u5934\u5FEB\u6B65\u8D70\u8FC7\uFF0C\u4E0B\u697C\uFF0C\u8D70\u4E0A\u7070\u6251\u6251\u7684\u8001\u57CE\u533A\u8857\u9053\u3002"
+    nextId: 
+  - nodeId: 13100
+    speakerName: "\u65C1\u767D"
+    portraitKey: 
+    text: "\u4E00\u5BB6\u62C9\u4E0B\u5377\u5E18\u95E8\u7684\u5C0F\u5546\u94FA\uFF0C\u95E8\u4E0A\u8D34\u7740\u76B1\u5DF4\u5DF4\u7684\u544A\u793A\uFF1A\u201C\u65FA\u94FA\u8F6C\u8BA9\uFF0C\u8054\u7CFB\u7535\u8BDD\uFF1A138\u2026\u2026\u201D\u7EB8\u5DF2\u6CDB\u9EC4\uFF0C\u7535\u8BDD\u88AB\u96E8\u6C34\u6D07\u5F97\u6A21\u7CCA\u3002"
+    nextId: 13110
+  - nodeId: 13110
+    speakerName: "\u6797\u987E\u5FF5"
+    portraitKey: Portrait_LinGuNian
+    text: "\u5173\u4E86\u597D\u4E00\u9635\u4E86\u2026\u2026\u8FD9\u6761\u8857\u7684\u5E97\u4E00\u5BB6\u63A5\u4E00\u5BB6\u5173\u3002"
+    nextId: 
+  - nodeId: 13200
+    speakerName: "\u65C1\u767D"
+    portraitKey: 
+    text: "\u9508\u8FF9\u6591\u6591\u7684\u544A\u793A\u680F\u8D34\u6EE1\u5C0F\u5E7F\u544A\uFF0C\u4E2D\u95F4\u4E00\u5F20\u7269\u4E1A\u901A\u77E5\uFF1A\u201C\u5173\u4E8E\u672C\u5C0F\u533A\u8001\u65E7\u4F9B\u6C34\u8BBE\u65BD\u66F4\u6362\u5DE5\u4F5C\u7684\u901A\u77E5\u2026\u2026\u5DF2\u4E8E2014\u5E744\u6708\u5B8C\u6210\u2026\u2026\u201D\u540E\u9762\u88AB\u4E00\u5F20\u62DB\u8058\u542F\u4E8B\u76D6\u4F4F\u3002"
+    nextId: 13210
+  - nodeId: 13210
+    speakerName: "\u6797\u987E\u5FF5"
+    portraitKey: Portrait_LinGuNian
+    text: "\u2026\u2026\uFF08\u4ED6\u7684\u76EE\u5149\u5728\u201C\u4F9B\u6C34\u8BBE\u65BD\u66F4\u6362\u201D\u51E0\u4E2A\u5B57\u4E0A\u505C\u4E86\u4E0D\u5230\u4E00\u79D2\uFF0C\u7136\u540E\u79FB\u5F00\u4E86\u3002\uFF09"
+    nextId: 
+  - nodeId: 13300
+    speakerName: "\u65C1\u767D"
+    portraitKey: 
+    text: "\u8D70\u5230\u62D0\u89D2\u65F6\uFF0C\u8FDC\u5904\u7A81\u7136\u4F20\u6765\u4E00\u9635\u72D7\u53EB\uFF0C\u5C16\u9510\u800C\u6025\u4FC3\u3002"
+    nextId: 13310
+  - nodeId: 13310
+    speakerName: "\u6797\u987E\u5FF5"
+    portraitKey: Portrait_LinGuNian
+    text: "\uFF08\u4ED6\u731B\u5730\u7F29\u4E86\u4E00\u4E0B\u8116\u5B50\u3002\uFF09"
+    nextId: 
+  - nodeId: 13320
+    speakerName: "\u6797\u987E\u5FF5"
+    portraitKey: Portrait_LinGuNian
+    text: "\u2026\u2026\uFF08\u7A81\u5982\u5176\u6765\u7684\u5C16\u9510\u58F0\u97F3\u8BA9\u5FC3\u8DF3\u9AA4\u7136\u52A0\u901F\uFF0C\u6B65\u4F10\u4E0D\u81EA\u89C9\u52A0\u5FEB\u3002\u5E94\u6FC0\u5EA6
+      +2\uFF09"
+    nextId: 
+  - nodeId: 13400
+    speakerName: "\u4FBF\u5229\u5E97\u8001\u677F"
+    portraitKey: Portrait_StoreOwner
+    text: "\u6765\u4E86\uFF1F\u4ECA\u5929\u8D27\u591A\uFF0C\u540E\u9762\u4ED3\u5E93\u5806\u4E86\u5341\u51E0\u7BB1\uFF0C\u4F60\u6162\u6162\u642C\uFF0C\u522B\u7740\u6025\u3002"
+    nextId: 13410
+  - nodeId: 13410
+    speakerName: "\u6797\u987E\u5FF5"
+    portraitKey: Portrait_LinGuNian
+    text: "\u55EF\u3002"
+    nextId: 13420
+  - nodeId: 13420
+    speakerName: "\u4FBF\u5229\u5E97\u8001\u677F"
+    portraitKey: Portrait_StoreOwner
+    text: "\u54CE\uFF0C\u4F60\u8138\u8272\u600E\u4E48\u8FD9\u4E48\u5DEE\uFF1F\u6628\u665A\u53C8\u6CA1\u7761\u597D\uFF1F"
+    nextId: 
+  - nodeId: 13430
+    speakerName: "\u4FBF\u5229\u5E97\u8001\u677F"
+    portraitKey: Portrait_StoreOwner
+    text: "\u5E74\u8F7B\u4EBA\u522B\u71AC\u591C\u2026\u2026\u7B97\u4E86\uFF0C\u4F60\u642C\u5B8C\u6211\u7ED9\u4F60\u7ED3\u94B1\uFF0C\u4ECA\u5929\u4E00\u767E\u4E8C\u3002"
+    nextId: 13450
+  - nodeId: 13440
+    speakerName: "\u4FBF\u5229\u5E97\u8001\u677F"
+    portraitKey: Portrait_StoreOwner
+    text: "\u5509\uFF0C\u5E74\u8F7B\u4EBA\u522B\u786C\u6491\u7740\u3002\u642C\u5B8C\u6211\u7ED9\u4F60\u7ED3\u94B1\uFF0C\u4ECA\u5929\u4E00\u767E\u4E8C\u3002"
+    nextId: 13450
+  - nodeId: 13450
+    speakerName: "\u65C1\u767D"
+    portraitKey: 
+    text: "\uFF08\u642C\u8D27\u4EFB\u52A1\uFF1A\u628A\u8D27\u7BB1\u4ECE\u4ED3\u5E93\u642C\u5230\u8D27\u67B6\u6307\u5B9A\u4F4D\u7F6E\u3002\u80CC\u666F\u91CC\u6536\u97F3\u673A\u64AD\u7740\u65E0\u5173\u7D27\u8981\u7684\u672C\u5730\u65B0\u95FB\u2014\u2014\u5929\u6C14\u3001\u8001\u57CE\u533A\u4FEE\u7F2E\u3002\uFF09"
+    nextId: 13460
+  - nodeId: 13460
+    speakerName: "\u65C1\u767D"
+    portraitKey: 
+    text: "\u642C\u5B8C\u6700\u540E\u4E00\u7BB1\uFF0C\u540E\u80CC\u7684\u8863\u670D\u5DF2\u88AB\u6C57\u6D78\u900F\u3002\u8001\u677F\u9012\u8FC7\u4E00\u74F6\u77FF\u6CC9\u6C34\uFF1A\u201C\u559D\u70B9\u6C34\u3002\u94B1\u6211\u8F6C\u4F60\u624B\u673A\u4E0A\u4E86\u3002\u201D"
+    nextId: 13470
+  - nodeId: 13470
+    speakerName: "\u4FBF\u5229\u5E97\u8001\u677F"
+    portraitKey: Portrait_StoreOwner
+    text: "\u660E\u5929\u8FD8\u6765\u4E0D\u6765\uFF1F"
+    nextId: 13480
+  - nodeId: 13480
+    speakerName: "\u6797\u987E\u5FF5"
+    portraitKey: Portrait_LinGuNian
+    text: "\u6765\u3002"
+    nextId: 13490
+  - nodeId: 13490
+    speakerName: "\u4FBF\u5229\u5E97\u8001\u677F"
+    portraitKey: Portrait_StoreOwner
+    text: "\u884C\uFF0C\u90A3\u660E\u5929\u89C1\u3002"
+    nextId: 
+  choiceGroups:
+  - nodeId: 13310
+    choices:
+    - choiceId: 1
+      choiceOrder: 1
+      nodeId: 13310
+      optionText: "[\u5FEB\u6B65\u8D70\u8FC7]"
+      nextId: 13320
+      stressModifier: 2
+      thresholdLow: 0
+      thresholdHigh: 100
+      unavailableMode: 0
+  - nodeId: 13420
+    choices:
+    - choiceId: 2
+      choiceOrder: 1
+      nodeId: 13420
+      optionText: "[\u8FD8\u884C\u3002]"
+      nextId: 13430
+      stressModifier: 0
+      thresholdLow: 0
+      thresholdHigh: 100
+      unavailableMode: 0
+    - choiceId: 3
+      choiceOrder: 2
+      nodeId: 13420
+      optionText: "[\u6CA1\u7761\u597D\u2026\u2026]"
+      nextId: 13440
+      stressModifier: -1
+      thresholdLow: 0
+      thresholdHigh: 100
+      unavailableMode: 0
